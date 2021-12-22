@@ -1,2 +1,15 @@
-# r3f-for-testing
-just for testing
+
+### Development mode
+```
+npm install
+npx shadow-cljs watch app
+```
+start a ClojureScript REPL
+```
+npx shadow-cljs browser-repl
+```
+### Building for production
+
+```
+npx shadow-cljs release app
+```

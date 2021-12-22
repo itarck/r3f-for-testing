@@ -1,0 +1,20 @@
+{:source-paths ["src"]
+ :dependencies [[binaryage/devtools "1.0.3"]
+                [applied-science/js-interop "0.3.1"]
+                [nrepl "0.8.3"]
+                [reagent "1.1.0"]]
+ :builds       {:r3f-and-drei {:target     :browser
+                               :output-dir "public/js"
+                               :asset-path "/js"
+                               :modules    {:app {:entries [r3f-for-testing.r3f-and-drei]
+                                                  :init-fn r3f-for-testing.r3f-and-drei/init!}}
+                               :devtools   {:after-load r3f-for-testing.r3f-and-drei/mount-root}}
+                :r3f-only {:target     :browser
+                           :output-dir "public/js"
+                           :asset-path "/js"
+                           :modules    {:app {:entries [r3f-for-testing.r3f-only]
+                                              :init-fn r3f-for-testing.r3f-only/init!}}
+                           :devtools   {:after-load r3f-for-testing.r3f-only/mount-root}}}
+
+ :dev-http     {3000 {:root    "public"
+                      :handler user/app}}}
