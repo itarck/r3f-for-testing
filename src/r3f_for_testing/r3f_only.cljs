@@ -2,7 +2,6 @@
   (:require
    [applied-science.js-interop :as j]
    [reagent.dom :as rdom]
-   ["three" :as three]
    ["@react-three/fiber" :refer [Canvas]]
 ;;    ["@react-three/drei" :refer [OrbitControls]]
    ))
@@ -21,8 +20,6 @@
            :args [1 2 3]}
     [:boxGeometry {:args [1 1 1]}]
     [:meshStandardMaterial {:color "red"
-                            :side three/DoubleSide
-                            :opacity 0.1
                             :transparent true}]]])
 
 
