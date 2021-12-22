@@ -1,9 +1,9 @@
 # r3f for testing
 
-### @react-three/drei can't go through shadow-cljs since v4.0
+## @react-three/drei can't go through shadow-cljs since v4.0
 
 
-r3f+drei, version at 2021-03-26, ok
+### r3f+drei, version at 2021-03-26, ok
 
 package.json
 
@@ -22,7 +22,7 @@ package.json
 
 
 
-r3f+drei, version at 2021-03-30, failed
+### r3f+drei, version at 2021-03-30, failed
 
 
     shadow-cljs - watching build :r3f-and-drei
@@ -35,6 +35,9 @@ r3f+drei, version at 2021-03-30, failed
     --- node_modules/three-stdlib/index.cjs.js:2
     Illegal variable reference before declaration: t
 
+some [BREAKING CHANGES] of @react-three/drei
+
+[BREAKING CHANGES]:https://github.com/pmndrs/drei/releases?page=17
 
 - "@react-three/drei": "^4.0.0",     // (2021-03-29)  three-stdlib is now the defacto pacakge over three/examples. minimum supported version of react-three/fiber is ">=6.0"
 - "@react-three/fiber": "^6.0.0",    //  (2021-03-30), rename react-three-fiber to @react-three/fiber
@@ -55,7 +58,7 @@ package.json
     }
 
 
-r3f-only, 2021-10-06, for all versions, ok
+### r3f-only, for all versions, ok
 
 - "@react-three/fiber": "^7.0.10",    //  (2021-10-06)
 
