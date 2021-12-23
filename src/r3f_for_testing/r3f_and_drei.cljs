@@ -2,8 +2,7 @@
   (:require
    [applied-science.js-interop :as j]
    [reagent.dom :as rdom]
-;;    ["@react-three/fiber" :refer [Canvas]]
-   ["react-three-fiber" :refer [Canvas]]
+   ["@react-three/fiber" :refer [Canvas]]
    ["@react-three/drei" :refer [Box OrbitControls]]))
 
 

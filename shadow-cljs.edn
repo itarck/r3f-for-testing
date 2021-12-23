@@ -8,7 +8,10 @@
                                :asset-path "/js"
                                :modules    {:app {:entries [r3f-for-testing.r3f-and-drei]
                                                   :init-fn r3f-for-testing.r3f-and-drei/init!}}
-                               :devtools   {:after-load r3f-for-testing.r3f-and-drei/mount-root}}
+                               :devtools   {:after-load r3f-for-testing.r3f-and-drei/mount-root}
+                               :js-options {:js-provider :external
+                                            :external-index "target/index.js"}}
+
                 :r3f-only {:target     :browser
                            :output-dir "public/js"
                            :asset-path "/js"
@@ -16,5 +19,5 @@
                                               :init-fn r3f-for-testing.r3f-only/init!}}
                            :devtools   {:after-load r3f-for-testing.r3f-only/mount-root}}}
 
- :dev-http     {3000 {:root    "public"
+ :dev-http     {3003 {:root    "public"
                       :handler user/app}}}
